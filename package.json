@@ -1,0 +1,15 @@
+{
+  "name": "denny",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "null",
+    "build": "null",
+    "start": "null"
+  },
+  "author": {
+    "email": "d@danmckeown.info",
+    "name": "Dan McKeown",
+    "copyright": "2018"
+  },
+  "dependencies": {}
+}
