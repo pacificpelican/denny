@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-	<script src="../../../../../../../wp-content/themes/denny/js/singlePostApp.js"></script>
+	
 	<?php wp_head(); ?>
 </head>
 
