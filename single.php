@@ -59,7 +59,7 @@ window.onload = function () {
 		<main id="main" class="site-main">
 
 			<div id="singlePostApp">
-				{{ message }}
+				<span v-html="message"></span>
 			</div>
 
 		<?php
