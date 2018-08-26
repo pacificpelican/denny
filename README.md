@@ -4,11 +4,13 @@ denny theme for WordPress
 - built with the [WordPress API](https://developer.wordpress.org/rest-api/reference/)
   - denny theme uses the WordPress API to fetch post content in single.php
   - in order to figure out which post's content to retrieve, single.php uses `get_the_ID();` so it is still part-monolitic but it should provide a useful reference for how to retrieve specific content; in a custom site the post (or page or custom content type) would likely be already known on the client side
+  - the home.php page supersedes index.php in the WordPress [template hierachy](https://developer.wordpress.org/themes/basics/template-hierarchy/) and in this theme it uses the WordPress API to get the last (10) posts; however it does not work well currently for pages like /page/2 and can be safely removed and the traditonal index.php will replace it
 - copyright 2018 by [Dan McKeown](http://danmckeown.info) Licesned under the GNU GPL v2 or later
 - forked from [_s](https://underscores.me/) theme by Automattic
 
-**THIS INFORMATION COMES VIA THE _S THEME**
 
+
+**THIS INFORMATION COMES VIA THE _S THEME**
 _s
 ===
 

@@ -1,11 +1,8 @@
 <?php
 /**
- * The main template file
+ * The home file
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * This is a high-priority template file for the (posts-driven) home page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -25,8 +22,6 @@ window.onload = function () {
 			message: $postdata
 		},
 		mounted: function () {
-		//	alert();
-			
 			this.getWordPressPosts();
 		},
 		methods: {
@@ -39,11 +34,6 @@ window.onload = function () {
 					.then(function (response) {
 						if (response.ok) {
 							console.log("response 2 ok");
-							// console.log(response.json);
-							// for (var e in response.json) {
-							// 	console.log(e.toString());
-							// }
-							// console.log(response.text);
 							return response.json();
 						}
 						throw new Error("Network did not respond.");
@@ -51,7 +41,6 @@ window.onload = function () {
 					})
 					.then(function (myReturn) {
 						console.log(myReturn);
-				//		$postdata = myReturn.content.rendered.toString();
 						app5.message = myReturn;
 					});
 			}
@@ -76,8 +65,6 @@ window.onload = function () {
   			</div>
 			</section>
 			</div>
-
-		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

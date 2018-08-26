@@ -20,7 +20,6 @@ window.onload = function () {
 			message: $postdata
 		},
 		mounted: function () {
-		//	alert();
 			let postID = "<?php echo $currentPostID ?>";
 			this.getWordPressPost(postID);
 		},
@@ -46,7 +45,6 @@ window.onload = function () {
 					})
 					.then(function (myReturn) {
 						console.log(myReturn);
-				//		$postdata = myReturn.content.rendered.toString();
 						app5.message = myReturn.content.rendered;
 					});
 			}
