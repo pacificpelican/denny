@@ -15,8 +15,62 @@
 get_header();
 ?>
 
+<script>
+var $postdata = 'Vue WP App single post';
+
+window.onload = function () {
+	var app5 = new Vue({
+		el: '#mainPageApp',
+		data: {
+			message: $postdata
+		},
+		mounted: function () {
+		//	alert();
+			
+			this.getWordPressPosts();
+		},
+		methods: {
+			reverseMessage: function () {
+				this.message = this.message.split('').reverse().join('')
+			},
+			getWordPressPosts() {
+				let dest = '/wp-json/wp/v2/posts';
+				fetch(dest, {})
+					.then(function (response) {
+						if (response.ok) {
+							console.log("response 2 ok");
+							// console.log(response.json);
+							// for (var e in response.json) {
+							// 	console.log(e.toString());
+							// }
+							// console.log(response.text);
+							return response.json();
+						}
+						throw new Error("Network did not respond.");
+						return response.blob();
+					})
+					.then(function (myReturn) {
+						console.log(myReturn);
+				//		$postdata = myReturn.content.rendered.toString();
+						app5.message = myReturn;
+					});
+			}
+		}
+	})
+}
+</script>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div id="mainPageApp">
+				
+				<ul id="example-1">
+  			<li v-for="item in message">
+    			{{ item.id }}
+  			</li>
+			</ul>
+			</div>
+			
 
 		<?php
 		if ( have_posts() ) :

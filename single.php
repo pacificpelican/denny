@@ -29,7 +29,7 @@ window.onload = function () {
 				this.message = this.message.split('').reverse().join('')
 			},
 			getWordPressPost(postID) {
-				let dest = 'http://localhost:8888/wp-json/wp/v2/posts/' + postID.toString();
+				let dest = '/wp-json/wp/v2/posts/' + postID.toString();
 				fetch(dest, {})
 					.then(function (response) {
 						if (response.ok) {
