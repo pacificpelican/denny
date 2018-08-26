@@ -64,14 +64,20 @@ window.onload = function () {
 		<main id="main" class="site-main">
 			<div id="mainPageApp">
 				
-				<ul id="example-1">
-  			<li v-for="item in message">
-    			{{ item.id }}
-  			</li>
-			</ul>
+				<section id="example-1">
+  			<div id="contentSection" v-for="item in message">
+					
+    				<header><h1 className="page-title screen-reader-text"><a href="?p={{item.title.rendered}}">{{ item.title.rendered }}</a></h1></header>
+						<div v-html="item.content.rendered"></div>
+  			</div>
+			</section>
 			</div>
 			
+			
+						<h1 class="page-title screen-reader-text">kkkk</h1>
+					</header>
 
+		<h4>Posts Meta-data</h4>
 		<?php
 		if ( have_posts() ) :
 

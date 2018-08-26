@@ -51,7 +51,8 @@
 			'after'  => '</div>',
 		) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
+	<!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php denny_entry_footer(); ?>
