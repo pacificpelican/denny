@@ -13,7 +13,7 @@ get_header();
 ?>
 
 <script>
-var $postdata = 'Vue WP App single post';
+var $postdata = 'Vue WP App home page';
 
 window.onload = function () {
 	var app5 = new Vue({
@@ -60,7 +60,7 @@ window.onload = function () {
 						</h1>
 					</header>
 					<div class="entry-content">
-					<div v-html="item.content.rendered"></div>
+						<div v-html="item.content.rendered"></div>
 					</div>
   			</div>
 			</section>

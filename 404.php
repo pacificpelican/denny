@@ -15,7 +15,7 @@ get_header();
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'denny' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404 NOT FOUND', 'denny' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
@@ -44,7 +44,7 @@ get_header();
 
 					<?php
 					/* translators: %1$s: smiley */
-					$denny_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'denny' ), convert_smilies( ':)' ) ) . '</p>';
+					$denny_archive_content = '<p>' . sprintf( esc_html__( 'monthly archives:', 'denny' ), convert_smilies( ':)' ) ) . '</p>';
 					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$denny_archive_content" );
 
 					the_widget( 'WP_Widget_Tag_Cloud' );
